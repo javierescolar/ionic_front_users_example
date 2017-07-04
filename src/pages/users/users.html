@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Users</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let user of users" (click)="showUser(user)">
+      <ion-icon name="person" item-left></ion-icon>
+      {{user.name +' '+user.surnames}} 
+    </button>
+    <button ion-item>
+      <ion-icon name="add" item-left></ion-icon>
+       New User
+    </button>
+  </ion-list>
+
+  
+</ion-content>
