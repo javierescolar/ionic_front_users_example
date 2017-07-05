@@ -35,5 +35,9 @@ export class UsersServiceProvider {
     return this.http.put('http://localhost:3000/api/users/'+user.id,body)
       .map((res) => res.json());
   }
+  
+  deleteUserId(userId){
+    return this.http.delete('http://localhost:3000/api/users/'+userId);
+  }
 
 }

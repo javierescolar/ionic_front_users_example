@@ -26,13 +26,13 @@ export class ShowUserPage {
     console.log('ionViewDidLoad ShowUserPage');
   }
 
-  /*deleteUser(userID) {
-    console.log(this.us.deleteUserId(userID));
-    //this.navCtrl.push(UsersPage);
-      }*/
-    editUser(){
-      this.us.editUserId(this.show_user);
-    }
+  deleteUser() {
+    console.log(this.us.deleteUserId(this.show_user.id));
+    this.navCtrl.push(UsersPage);
+  }
+  editUser(){
+    this.us.editUserId(this.show_user);
+  }
     
 
 
